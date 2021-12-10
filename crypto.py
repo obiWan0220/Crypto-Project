@@ -3,8 +3,6 @@ import finnhub
 import pandas as pd
 import datetime as dt
 finnhub_client = finnhub.Client(api_key="c5k48vaad3ie96ef5i60")
-#stock = 'BTC'
-#resolution = 'D'
 end_date = dt.datetime.now()
 start_date = end_date - dt.timedelta(days=365)
 end = int(end_date.timestamp())
@@ -15,6 +13,3 @@ print(finnhub_client.crypto_candles('BINANCE:BTCUSDT', 'M', start, end)) # Bitco
 print(finnhub_client.crypto_candles('BINANCE:ETHUSDT', 'M', start, end)) # Etherum
 print(finnhub_client.crypto_candles('BINANCE:SHIBUSDT', 'M', start, end,)) # Shibu Inu Coin
 print(finnhub_client.crypto_candles('BINANCE:ADAUSDT', 'M', start, end,)) # cardono 
-#df = pd.DataFrame(result)
-#print(df)
-#print(finnhub_client.crypto_exchanges())
